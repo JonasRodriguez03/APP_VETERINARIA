@@ -6,6 +6,7 @@ import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { Link } from '@inertiajs/vue3';
+//import SidebarMenu from '@/Layouts/SidebarMenu.vue';
 
 const showingNavigationDropdown = ref(false);
 </script>
@@ -21,16 +22,17 @@ const showingNavigationDropdown = ref(false);
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
                                 <Link :href="route('dashboard')">
-                                    <ApplicationLogo
+                                    <img src="/Logo.png" alt="LOCALVET" class="h-10 w-auto">
+                                    <!-- <ApplicationLogo
                                         class="block h-9 w-auto fill-current text-gray-800"
-                                    />
+                                    /> -->
                                 </Link>
                             </div>
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
+                                    LOCALVET
                                 </NavLink>
                             </div>
                         </div>
@@ -64,9 +66,9 @@ const showingNavigationDropdown = ref(false);
                                     </template>
 
                                     <template #content>
-                                        <DropdownLink :href="route('profile.edit')"> Profile </DropdownLink>
+                                        <DropdownLink :href="route('profile.edit')"> Perfil </DropdownLink>
                                         <DropdownLink :href="route('logout')" method="post" as="button">
-                                            Log Out
+                                            Cerrar Sesion
                                         </DropdownLink>
                                     </template>
                                 </Dropdown>
